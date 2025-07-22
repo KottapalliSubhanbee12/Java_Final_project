@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+h2, h3 {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+#loginSection, #machineSection {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #26c6da;
+    outline: none;
+}
+
+button {
+    background-color: #26c6da;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+pre#receipt {
+    background: #f1f8e9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: #33691e;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px dashed #cddc39;
+    white-space: pre-wrap;
+}
+
+#topBar {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#languageSelect {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+

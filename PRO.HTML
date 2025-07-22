@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swiping Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ONE.JS" defer></script>
+</head>
+<body>
+    <!-- Top bar with language selection and exit -->
+    <div id="topBar">
+        <select id="languageSelect" onchange="setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ml">മലയാളം</option>
+            <option value="ta">தமிழ்</option>
+        </select>
+        <button onclick="exitApp()" id="exitBtn" style="display:none;">⛔ Exit</button>
+    </div>
+
+    <!-- Login Section -->
+    <div id="loginSection">
+        <h2 data-key="loginTitle">Login</h2>
+        <input type="text" id="loginCard" placeholder="Enter Card Number" data-key-placeholder="cardPlaceholder">
+        <input type="password" id="loginCode" placeholder="Enter Secret Code" data-key-placeholder="codePlaceholder">
+        <button onclick="login()" data-key="loginBtn">Login</button>
+
+        <h3 data-key="registerTitle">New Card? Register Below</h3>
+        <input type="text" id="newCard" placeholder="New Card Number" data-key-placeholder="newCardPlaceholder">
+        <input type="password" id="newCode" placeholder="New Secret Code" data-key-placeholder="newCodePlaceholder">
+        <button onclick="registerCard()" data-key="registerBtn">Register</button>
+    </div>
+
+    <!-- Machine Section -->
+    <div id="machineSection" style="display:none;">
+        <h2 id="title" data-key="swipeTitle">Swipe Your Card</h2>
+        <input type="text" id="cardNumber" readonly>
+        <input type="password" id="secretCode" readonly>
+        <input type="number" id="amount" placeholder="Enter Amount to Swipe" data-key-placeholder="amountPlaceholder">
+
+        <div class="buttons">
+            <button onclick="swipeCard()" id="btnSwipe" data-key="swipeBtn">💳 Swipe</button>
+            <button onclick="checkBalance()" id="btnBalance" data-key="balanceBtn">💰 Balance</button>
+            <button onclick="viewHistory()" id="btnHistory" data-key="historyBtn">📜 History</button>
+        </div>
+
+        <p id="message"></p>
+        <pre id="receipt"></pre>
+    </div>
+</body>
+</html>
+
